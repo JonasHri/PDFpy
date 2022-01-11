@@ -6,7 +6,7 @@ class PDF:
     def __init__(self, path = None):
         self.data = PdfFileWriter()
         if path != None:
-            file = PdfFileReader(open(path, "rb"))
+            file = PdfFileReader(open(path, "rb"), strict=False)
             for i in range(file.getNumPages()):
                 self.data.addPage(file.getPage(i))
 
@@ -56,15 +56,30 @@ class PDF:
         assert len(key) == len(other)
 
         res = PdfFileWriter()
-        idx = 0
         for i in range(len(self)):
-            if idx < len(key) and key[idx] == i:
+            if i in key:
+                idx = key.index(i)
                 res.addPage(other.data.getPage(idx))
-                idx += 1
             else:
                 res.addPage(self.data.getPage(i))
         
         self.data = res
+
+    def __delitem__(self, key):
+        if isinstance(key, int):
+            self.__delitem__([key])
+            return
+        elif isinstance(key, slice):
+            key = key.indices(len(self))
+            self.__delitem__(list(range(key[0], key[1], key[2])))
+            return
+        res = PdfFileWriter()
+        for i in range(len(self)):
+            if i not in key:
+                res.addPage(self.data.getPage(i))
+
+        self.data = res
+        
             
     def save(self, path):
         '''Saves the PDF at the designated path or the original Location if no path is given'''
