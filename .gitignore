@@ -1,6 +1,6 @@
 update.bat
 /dist
 /build
-PDFpy.egg-info
+/PDFpy.egg-info
 *.pdf
 __pychache__
