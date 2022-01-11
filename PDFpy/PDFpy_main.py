@@ -1,7 +1,10 @@
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
 class PDF:
-    '''A Simple Implementation of a PDF editor based on PyPDF2'''
+    '''
+    A Simple Implementation of a PDF editor based on PyPDF2
+    github: https://github.com/JonasHri/PDFpy
+    '''
     def __init__(self, path = None):
         self.data = []
         if path != None:

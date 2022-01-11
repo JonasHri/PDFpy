@@ -3,4 +3,4 @@ update.bat
 /build
 /PDFpy.egg-info
 *.pdf
-__pychache__
+**/__pychache__
