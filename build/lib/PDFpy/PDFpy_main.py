@@ -6,7 +6,7 @@ class PDF:
     def __init__(self, path = None):
         self.data = PdfFileWriter()
         if path != None:
-            file = PdfFileReader(open(path, "rb"))
+            file = PdfFileReader(open(path, "rb"), strict=False)
             for i in range(file.getNumPages()):
                 self.data.addPage(file.getPage(i))
 
