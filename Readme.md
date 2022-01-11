@@ -1,1 +1,1 @@
-# Placeholder
+A simple PDF editor that handles PDFs like lists of pages

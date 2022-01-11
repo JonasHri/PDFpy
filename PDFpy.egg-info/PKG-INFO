@@ -1,14 +1,14 @@
 Metadata-Version: 2.1
 Name: PDFpy
-Version: 0.0.1
+Version: 0.0.14
 Summary: Simple PDF editing made fast
 Home-page: UNKNOWN
 Author: Jonas Ha
 Author-email: <jonasharriehausen@gmail.com>
 License: UNKNOWN
 Description: 
-        # Placeholder
-Keywords: python,PDF
+        A simple PDF editor that handles PDFs like lists of pages
+Keywords: python,PDF,PDFpy
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
 Classifier: Intended Audience :: Developers
