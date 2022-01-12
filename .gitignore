@@ -1,4 +1,4 @@
-update.bat
+**/update.bat
 /dist
 /build
 /PDFpy.egg-info

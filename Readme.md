@@ -1,8 +1,6 @@
-A simple PDF editor that handles PDFs like lists of pages
+# Examples of How To Use
 
-# Functionality
-
-```
+```python
 from PDFpy import PDF
 
 # load two PDFs
@@ -24,3 +22,6 @@ c = a[:10] + b[13:]
 # save c as "example3.pdf"
 c.save("example3.pdf")
 ```
+
+
+github: https://github.com/JonasHri/PDFpy
