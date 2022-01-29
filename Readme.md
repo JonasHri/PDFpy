@@ -10,8 +10,8 @@ b = PDF("example2.pdf")
 # delete every other page from a
 del a[::2]
 
-# delete page 3 4 and 7 from b
-del b[[3, 4, 7]]
+# delete page 3 from b
+del b[3]
 
 # replace Page 3 from a with page 5 from b
 a[3] = b[5]
